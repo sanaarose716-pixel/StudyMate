@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyMate | Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>StudyMate 📚</h1>
+        <p>Your personal study and assignment planner</p>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h2>Welcome to StudyMate!</h2>
+            <p>Organize your assignments and stay on track.</p>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <h3>Total Tasks</h3>
+                <p id="totalTasks">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <p id="pendingTasks">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Completed</h3>
+                <p id="completedTasks">0</p>
+            </div>
+        </section>
+
+        <section class="task-section">
+            <h2>Add an Assignment</h2>
+
+            <form id="taskForm">
+                <input type="text" id="taskTitle"
+                    placeholder="Assignment title" required>
+
+                <input type="text" id="taskSubject"
+                    placeholder="Subject" required>
+
+                <label for="taskDueDate">Due date</label>
+                <input type="date" id="taskDueDate" required>
+
+                <select id="taskPriority">
+                    <option value="Low">Low Priority</option>
+                    <option value="Medium" selected>Medium Priority</option>
+                    <option value="High">High Priority</option>
+                </select>
+
+                <button type="submit">Add Assignment</button>
+            </form>
+        </section>
+
+        <section class="task-section">
+            <h2>My Assignments</h2>
+            <input type="search" id="searchInput"
+                placeholder="Search assignments...">
+            <div id="taskList">
+                <p>Loading assignments...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>StudyMate © 2026 | Stay organized, keep learning!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
